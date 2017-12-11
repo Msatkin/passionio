@@ -1,0 +1,20 @@
+.data-list-container {
+    flex: 1;
+    text-align: left;
+    margin: auto;
+    float:  left;
+}
+
+.data-list li {
+    clear:both;
+    float:left;
+}
+
+.data-btn {
+    flex: 2;
+}
+
+.display-data-container {
+    display: flex;
+    flex-direction: row;
+}

@@ -1,0 +1,29 @@
+.selection {
+    min-height: 100%;
+    max-width: 25%;
+    padding: 2% 5%;
+    flex: 0 1 32%;
+    text-align: center;
+    margin: 3% auto;
+}
+
+.selection > div {
+    flex-direction: column;
+    display: flex;
+    align-content: flex-end;
+    height: 100%;
+}
+
+.selection-icon-container {
+    flex: 1;
+}
+
+.selection-title {
+    flex: 1;
+}
+
+.selection:hover {
+    cursor: pointer;
+    background-color: #e6e6e6 !important;
+    color: #aaa !important;
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "id": 0,
+    "guid": "98ffe969-bfad-4ff2-8385-a7d68c4e7952",
+    "picture": "http://placehold.it/32x32",
+    "age": 21,
+    "name": "Aisha Vang"
+  },
+  {
+    "id": 1,
+    "guid": "a6c8c580-9767-45c0-bdfe-a2a8451716b8",
+    "picture": "http://placehold.it/32x32",
+    "age": 39,
+    "name": "Adkins Bonner"
+  },
+  {
+    "id": 2,
+    "guid": "c614882e-3a62-44a6-8047-d331a3f2f76e",
+    "picture": "http://placehold.it/32x32",
+    "age": 39,
+    "name": "Jean Velez"
+  },
+  {
+    "id": 3,
+    "guid": "920d358b-530e-40dc-88a2-51c82e6cfdb8",
+    "picture": "http://placehold.it/32x32",
+    "age": 25,
+    "name": "Dianne Rivas"
+  },
+  {
+    "id": 4,
+    "guid": "38e5fc88-9712-4cc8-8ae3-16772e7a3bca",
+    "picture": "http://placehold.it/32x32",
+    "age": 28,
+    "name": "Grimes Perry"
+  },
+  {
+    "id": 5,
+    "guid": "e59684a1-140f-4d5e-afad-712381988d38",
+    "picture": "http://placehold.it/32x32",
+    "age": 37,
+    "name": "Watkins Walker"
+  },
+  {
+    "id": 6,
+    "guid": "9da703bd-20e1-4279-8b84-24febc681aa2",
+    "picture": "http://placehold.it/32x32",
+    "age": 27,
+    "name": "Patti Dillon"
+  },
+  {
+    "id": 7,
+    "guid": "c614882e-3a62-44a6-8047-d331a3f2f76e",
+    "picture": "http://placehold.it/32x32",
+    "age": 39,
+    "name": "Jean Velez"
+  }
+]

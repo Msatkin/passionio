@@ -1,0 +1,27 @@
+.App {
+  text-align: center;
+}
+
+.flex-row {
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.selection-container {
+  margin: 1% 5%;
+  justify-content: space-evenly;
+}
+
+.icon-lg {
+  width: 3em;
+  height: 3em;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+.align-left {
+  text-align: left;
+}
