@@ -8,15 +8,14 @@ import ChapterIcon from 'material-ui/svg-icons/action/speaker-notes';
 class JsonApi {
     //Creates Tab and sets default values
     static createTab(type, index, parentId, parentType) {
-        let table = this.getTable(type, parentId);
+        let table = this.getTable(type, parentId, parentType);
         let page = this.getPage(table, 10, 0);
         let tab = this.createDefaultTab(type);
-
         tab.table.data = table;
         tab.page.data = page;
         tab.id = index;
         tab.parent.type = (parentType != null) ? parentType : null;
-        tab.parent.name = (parentType != null) ? this.getName(parentType, parentId) : null;
+        tab.parent.name = (parentType != null) ? this.getEntryFromId(parentType, parentId).name : null;
 
         return tab;
     }
@@ -122,17 +121,26 @@ class JsonApi {
         return table.filter((element) => element.name.toLowerCase().includes(value.toLowerCase()));
     }
 
-    static getTable(table, parentId) {
+    static getTable(table, parentId, parentType) {
+        let parent;
+        parent = (parentId != null) ? this.getEntryFromId(parentType, parentId) : null;
+        console.log(table, parentId, parentType)
         //Gets table filtering for parents id when given a parent
         switch(table.toLowerCase()) {
             case "user":
-                return (parentId != null) ? users.filter((user) => (user.id === parentId)) : users;
+
+                return (parent != null) ? users.filter((user) => (user.id === parent.user_id)) : users;
                 
             case "chapter":
-                return (parentId != null) ? chapters.filter((chapter) => (chapter.course_id === parentId)) : chapters;
+                return (parent != null) ? chapters.filter((chapter) => (chapter.course_id === parentId)) : chapters;
 
             case "course":
-                return (parentId != null) ? courses.filter((course) => (course.user_id === parentId)) : courses;
+                if (parentType === "user")
+                    return (parent != null) ? courses.filter((course) => (course.user_id === parent.id)) : courses;
+                if (parentType === "chapter")
+                    return (parent != null) ? courses.filter((course) => (course.id === parent.course_id)) : courses;
+                if (parentType == null) return courses;
+                break;
 
             default:
                 return null;
@@ -140,16 +148,17 @@ class JsonApi {
     }
 
     //Gets name from id
-    static getName(type, id) {
-        switch(type.toLowerCase()) {
+    static getEntryFromId(type, id) {
+        console.log(type)
+        switch(type) {
             case "user":
-                return users.filter((user) => user.id === id)[0].name;
+                return users.filter((user) => user.id === id)[0];
 
             case "chapter":
-                return chapters.filter((chapter) => chapter.id === id)[0].name;
+                return chapters.filter((chapter) => chapter.id === id)[0];
 
             case "course":
-                return courses.filter((course) => course.id === id)[0].name;
+                return courses.filter((course) => course.id === id)[0];
 
             default:
                 return null;

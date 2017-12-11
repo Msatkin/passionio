@@ -4,6 +4,7 @@ import * as appActions from './appActions';
 
 //Return promise of api tab response
 function callCreateTab(type, index, parentId, parentType) {
+    console.log(type, index, parentId, parentType)
     return new Promise((resolve, reject) => {
         try {
             resolve(jsonApi.createTab(type, index, parentId, parentType));

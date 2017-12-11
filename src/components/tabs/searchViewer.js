@@ -95,7 +95,8 @@ export default class SearchViewer extends React.Component {
     }
 
     //Creates new tab from selection
-    createChildTab(id, type) {
-        this.props.createChild(type, this.props.content.id, id, this.props.content.table.name);
+    createChildTab(parentId, type) {
+        console.log(type, this.props.content.id, parentId, this.props.content.table.name)
+        this.props.createChild(type, this.props.content.id, parentId, this.props.content.table.name);
     }
 }

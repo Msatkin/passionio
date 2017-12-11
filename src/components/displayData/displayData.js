@@ -40,7 +40,7 @@ export default class DisplayData extends React.Component {
                 icon={child.icon}
                 iconStyle={style.icon}
                 type={child.type}
-                onClick={() => this.props.onClick(this.props.listContent.id, child.type)}/>
+                onClick={(type) => this.props.onClick(this.props.listContent.id, type)}/>
         ))
     }
 }
