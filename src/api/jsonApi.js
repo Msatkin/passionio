@@ -124,7 +124,6 @@ class JsonApi {
     static getTable(table, parentId, parentType) {
         let parent;
         parent = (parentId != null) ? this.getEntryFromId(parentType, parentId) : null;
-        console.log(table, parentId, parentType)
         //Gets table filtering for parents id when given a parent
         switch(table.toLowerCase()) {
             case "user":
@@ -149,7 +148,6 @@ class JsonApi {
 
     //Gets name from id
     static getEntryFromId(type, id) {
-        console.log(type)
         switch(type) {
             case "user":
                 return users.filter((user) => user.id === id)[0];
