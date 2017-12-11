@@ -2,7 +2,7 @@
   "name": "PassionIo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://gitname.github.io/passionio"
+  "homepage": "http://gitname.github.io/passionio",
   "devDependencies": {
     "gh-pages": "^1.1.0",
     "react-scripts": "1.0.17",
