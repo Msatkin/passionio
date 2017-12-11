@@ -148,6 +148,7 @@ class JsonApi {
 
     //Gets name from id
     static getEntryFromId(type, id) {
+        console.log(type)
         switch(type) {
             case "user":
                 return users.filter((user) => user.id === id)[0];
